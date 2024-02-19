@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="2" parallel="tests">
+	<listeners>
+		<listener class-name="com.listeners.Testinfo"></listener>
+		<!--		<listener
+		class-name="com.listeners.AnnotationListerners"></listener>-->
+	</listeners>
+	<test name="Run on Chrome1">
+		<parameter name="Browser" value="Chrome"></parameter>
+		<classes>
+			<class name="com.tests.Search" />
+		</classes>
+	</test>
+
+	<test name="Run on Chrome2">
+		<parameter name="Browser" value="Chrome"></parameter>
+		<classes>
+			<class name="com.tests.Search" />
+		</classes>
+	</test>
+
+<!--	<test name="Run on Chrome3">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+	
+<!--	<test name="Run on Chrome4">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+	
+<!--	<test name="Run on Chrome5">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome6">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome7">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome8">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome9">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome10">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome11">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome12">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome13">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome14">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome15">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome16">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome17">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome18">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome19">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome20">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+	
+</suite>
