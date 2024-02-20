@@ -74,7 +74,7 @@ public class Browser {
 		}else {
 			System.out.println("Browser not matched");
 		}
-		driver.manage().window().maximize();
+		DriverManager.getDriver().manage().window().maximize();
 		DriverManager.getDriver().get(prop.getProperty("URL"));
 		
 		BaseClass.implictwait(30);

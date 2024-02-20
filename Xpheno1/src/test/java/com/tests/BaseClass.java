@@ -17,12 +17,10 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -55,7 +53,7 @@ public class BaseClass extends Browser {
 	 * @param element enter the webelement
 	 * @return element text
 	 */
-	private  String Gettext(WebElement element) {
+	private static  String Gettext(WebElement element) {
 		return element.getText();
 	}
 	/**
@@ -64,7 +62,7 @@ public class BaseClass extends Browser {
 	 * @param attributename enter the attribute name
 	 * @return attribute value
 	 */
-	private  String Getattribute(WebElement element,String attributename) {
+	private static  String Getattribute(WebElement element,String attributename) {
 		return element.getAttribute(attributename);
 	}
 	/**
@@ -72,7 +70,7 @@ public class BaseClass extends Browser {
 	 * @param element given an webelement
 	 * @param value enter the value that will send
 	 */
-	public void sendkeys(WebElement element,String value) {
+	public static void sendkeys(WebElement element,String value) {
 		element.sendKeys(value);
 		if(!Getattribute(element,"placeholder").isEmpty()) {
 			Extentlogger.pass(value+" is entered in "+Getattribute(element,"placeholder")+" successfully",false);
@@ -86,7 +84,7 @@ public class BaseClass extends Browser {
 	 * @param element given an webelement
 	 * @param value enter the value that will send
 	 */
-	public void sendkeywithbackspace(WebElement element) {
+	public static void sendkeywithbackspace(WebElement element) {
 		clickelement(element);
 		element.sendKeys(Keys.BACK_SPACE);
 
@@ -171,7 +169,7 @@ public class BaseClass extends Browser {
 	 * @param element enter the webelement
 	 * @param seconds give a seconds that will wait
 	 */
-	private void Waitforclickable(WebElement element,int seconds) {
+	private static void Waitforclickable(WebElement element,int seconds) {
 		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
@@ -189,7 +187,7 @@ public class BaseClass extends Browser {
 	 * click the element 
 	 * @param element enter the webelement
 	 */
-	public  void clickelement(WebElement element) {
+	public static  void clickelement(WebElement element) {
 		Waitforclickable(element,20);
 		String text=Gettext(element);
 		element.click();
@@ -243,7 +241,7 @@ public class BaseClass extends Browser {
 	 * javascriptclick
 	 * @param element enter the element
 	 */
-	public void javascriptclick(WebElement element) {
+	public static void javascriptclick(WebElement element) {
 		JavascriptExecutor js=(JavascriptExecutor)DriverManager.getDriver();
 		String text=Gettext(element);
 		js.executeScript("arguments[0].click();", element);		
@@ -332,7 +330,7 @@ public class BaseClass extends Browser {
 		}
 	}
 
-	public void randomname(WebElement element, String field) {
+	public static void randomname(WebElement element, String field) {
 
 
 		data listofdata = new data();
@@ -421,21 +419,24 @@ public class BaseClass extends Browser {
 	}
 
 
-	public String RandomDropDown(String xpath, String count) {
+	public static void RandomDropDown(By by, String count) {
 		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(65));
-		List<WebElement> clientnamelist = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpath)));
+		List<WebElement> clientnamelist = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
 
 		for(WebElement input : clientnamelist) {
 			String text = input.getText();
 			System.out.println(text);
 			Extentlogger.info(text);
 		}
-
-
-		return xpath;
 	}
 
+	public static WebElement element(By by) {
+		return DriverManager.getDriver().findElement(by);
+	}
 
+	public List<WebElement> listelement(By by) {
+		return DriverManager.getDriver().findElements(by);
+	}
 }
 
 

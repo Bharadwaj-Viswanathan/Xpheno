@@ -9,7 +9,7 @@ public class Search extends BaseClass {
 
 	@Test
 	void cadidatesearch() {
-		searchpom s=new searchpom(DriverManager.getDriver());
+		searchpom s=new searchpom();
 		s.search();
 	}
 }
