@@ -20,56 +20,56 @@
 		</classes>
 	</test>
 
-	<test name="Run on Chrome3">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
+<!--	<test name="Run on Chrome3">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
 	
-	<test name="Run on Chrome4">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
+<!--	<test name="Run on Chrome4">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
 	
-	<test name="Run on Chrome5">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
-	<test name="Run on Chrome6">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
-	<test name="Run on Chrome7">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
-	<test name="Run on Chrome8">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
-	<test name="Run on Chrome9">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
-	<test name="Run on Chrome10">
-		<parameter name="Browser" value="Chrome"></parameter>
-		<classes>
-			<class name="com.tests.Search" />
-		</classes>
-	</test>
+<!--	<test name="Run on Chrome5">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome6">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome7">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome8">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome9">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
+<!--	<test name="Run on Chrome10">-->
+<!--		<parameter name="Browser" value="Chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="com.tests.Search" />-->
+<!--		</classes>-->
+<!--	</test>-->
 <!--	<test name="Run on Chrome11">-->
 <!--		<parameter name="Browser" value="Chrome"></parameter>-->
 <!--		<classes>-->

@@ -62,7 +62,7 @@ public class BaseClass extends Browser {
 	 * @param attributename enter the attribute name
 	 * @return attribute value
 	 */
-	private static  String Getattribute(WebElement element,String attributename) {
+	private  String Getattribute(WebElement element,String attributename) {
 		return element.getAttribute(attributename);
 	}
 	/**
@@ -70,7 +70,7 @@ public class BaseClass extends Browser {
 	 * @param element given an webelement
 	 * @param value enter the value that will send
 	 */
-	public static void sendkeys(WebElement element,String value) {
+	public  void sendkeys(WebElement element,String value) {
 		element.sendKeys(value);
 		if(!Getattribute(element,"placeholder").isEmpty()) {
 			Extentlogger.pass(value+" is entered in "+Getattribute(element,"placeholder")+" successfully",false);
@@ -84,7 +84,7 @@ public class BaseClass extends Browser {
 	 * @param element given an webelement
 	 * @param value enter the value that will send
 	 */
-	public static void sendkeywithbackspace(WebElement element) {
+	public  void sendkeywithbackspace(WebElement element) {
 		clickelement(element);
 		element.sendKeys(Keys.BACK_SPACE);
 
@@ -139,7 +139,7 @@ public class BaseClass extends Browser {
 	/**
 	 * Thread.sleep for 3sec
 	 */
-	public static void wait3sec() {
+	public static  void wait3sec() {
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -241,7 +241,7 @@ public class BaseClass extends Browser {
 	 * javascriptclick
 	 * @param element enter the element
 	 */
-	public static void javascriptclick(WebElement element) {
+	public void javascriptclick(WebElement element) {
 		JavascriptExecutor js=(JavascriptExecutor)DriverManager.getDriver();
 		String text=Gettext(element);
 		js.executeScript("arguments[0].click();", element);		
@@ -330,7 +330,7 @@ public class BaseClass extends Browser {
 		}
 	}
 
-	public static void randomname(WebElement element, String field) {
+	public  void randomname(WebElement element, String field) {
 
 
 		data listofdata = new data();
@@ -419,7 +419,7 @@ public class BaseClass extends Browser {
 	}
 
 
-	public static void RandomDropDown(By by, String count) {
+	public void RandomDropDown(By by, String count) {
 		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(65));
 		List<WebElement> clientnamelist = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
 
@@ -430,7 +430,7 @@ public class BaseClass extends Browser {
 		}
 	}
 
-	public static WebElement element(By by) {
+	public  WebElement element(By by) {
 		return DriverManager.getDriver().findElement(by);
 	}
 
